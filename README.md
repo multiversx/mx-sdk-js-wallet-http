@@ -27,6 +27,8 @@ Currently, the API will listen to http://localhost:8080 (port not yet configurab
 
 ## API
 
+For API examples, please see [client.http](client.http) as well.
+
 ### Generate an account
 
 One can generate an Elrond account - address, mnemonic, private key and key-file wallet - using the `account/new` route. 
