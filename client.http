@@ -1,0 +1,96 @@
+@baseUrl = http://localhost:8080
+
+###
+
+// New account, no password provided (will be empty)
+
+POST {{baseUrl}}/account/new
+
+###
+
+// New account, with key-file password provided
+
+POST {{baseUrl}}/account/new
+Content-Type: application/json
+
+{
+    "password": "foobar"
+}
+
+###
+
+// Sign transaction, good request
+
+POST {{baseUrl}}/transaction/sign
+Content-Type: application/json
+
+{
+    "transaction": {
+        "nonce": 42,
+        "receiver": "erd1cux02zersde0l7hhklzhywcxk4u9n4py5tdxyx7vrvhnza2r4gmq4vw35r",
+        "value": "100000000000000000",
+        "gasPrice": 1000000000,
+        "gasLimit": 70000,
+        "data": "food for cats",
+        "chainID": "1",
+        "version": 1
+    }, 
+    "privateKey": "f30620ae4be30c697a8a19d18126e79831b360a61f9218bea4da8f389ddfb8f1"
+}
+
+###
+
+// Sign transaction, bad request (nonce is missing)
+
+POST {{baseUrl}}/transaction/sign
+Content-Type: application/json
+
+{
+    "transaction": {
+        "receiver": "erd1cux02zersde0l7hhklzhywcxk4u9n4py5tdxyx7vrvhnza2r4gmq4vw35r",
+        "value": "100000000000000000",
+        "gasPrice": 1000000000,
+        "gasLimit": 70000,
+        "data": "food for cats",
+        "chainID": "1",
+        "version": 1
+    }, 
+    "privateKey": "f30620ae4be30c697a8a19d18126e79831b360a61f9218bea4da8f389ddfb8f1"
+}
+
+###
+
+// Sign transaction, bad request (sender is set)
+
+POST {{baseUrl}}/transaction/sign
+Content-Type: application/json
+
+{
+    "transaction": {
+        "nonce": 42,
+        "sender": "erd1cux02zersde0l7hhklzhywcxk4u9n4py5tdxyx7vrvhnza2r4gmq4vw35r",
+        "receiver": "erd1cux02zersde0l7hhklzhywcxk4u9n4py5tdxyx7vrvhnza2r4gmq4vw35r",
+        "value": "100000000000000000",
+        "gasPrice": 1000000000,
+        "gasLimit": 70000,
+        "data": "food for cats",
+        "chainID": "1",
+        "version": 1
+    }, 
+    "privateKey": "f30620ae4be30c697a8a19d18126e79831b360a61f9218bea4da8f389ddfb8f1"
+}
+
+###
+
+// Sign transaction, bad request
+
+POST {{baseUrl}}/transaction/sign
+Content-Type: application/json
+
+{
+    "transaction": {
+    }, 
+    "privateKey": ""
+}
+
+###

@@ -1,0 +1,27 @@
+{
+  "name": "erdwalletjs-http",
+  "version": "1.0.0",
+  "description": "Lighweight HTTP utility to manage accounts and sign transactions for the Elrond Network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElrondNetwork/erdwalletjs-http.git"
+  },
+  "keywords": [
+    "crypto"
+  ],
+  "author": "ElrondNetwork",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElrondNetwork/erdwalletjs-http/issues"
+  },
+  "homepage": "https://github.com/ElrondNetwork/erdwalletjs-http#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "@elrondnetwork/elrond-core-js": "^1.26.2",
+    "restify": "^8.5.1"
+  }
+}
