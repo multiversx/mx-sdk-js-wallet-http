@@ -8,9 +8,26 @@
 
 Lighweight HTTP utility to generate accounts and sign transactions for the Elrond Network.
 
+This utility relies on [elrond-core-js](https://github.com/ElrondNetwork/elrond-core-js) to generate accounts and sign transactions.
+
 **This HTTP utility should only be used in secure, off-line, environments. Do not host or use this on a web server.**
 
-## Generate an account
+## Setup and start
+
+Please make sure you have a recent version of [NodeJS](https://nodejs.org/en/) installed.
+
+```
+git clone https://github.com/ElrondNetwork/erdwalletjs-http.git
+cd erdwalletjs-http
+npm install
+node ./index.js
+```
+
+Currently, the API will listen to http://localhost:8080 (port not yet configurable).
+
+## API
+
+### Generate an account
 
 One can generate an Elrond account - address, mnemonic, private key and key-file wallet - using the `account/new` route. 
 
@@ -47,7 +64,7 @@ The response contains the `mnemonic phrase`, plus data derived from it: the priv
 }
 ```
 
-## Sign a transaction
+### Sign a transaction
 
 **Request:**
 
