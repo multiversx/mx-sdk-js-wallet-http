@@ -25,7 +25,6 @@ function Facade() {
 
     function signTransaction(rawTransaction, privateKeyHex) {
         assertIsSet(rawTransaction, "transaction");
-        assertIsSet(rawTransaction.nonce, "transaction.nonce");
         assertIsSet(rawTransaction.chainID, "transaction.chainID");
         assertIsSet(rawTransaction.version, "transaction.version");
         assertIsSet(rawTransaction.gasPrice, "transaction.gasPrice");
