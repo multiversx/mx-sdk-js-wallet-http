@@ -1,11 +1,5 @@
 # erdwalletjs-http
 
-**Work in progress!**
-
-**Work in progress!**
-
-**Work in progress!**
-
 Lighweight HTTP utility to generate accounts and sign transactions for the Elrond Network.
 
 This utility relies on [elrond-core-js](https://github.com/ElrondNetwork/elrond-core-js) to generate accounts and sign transactions.
