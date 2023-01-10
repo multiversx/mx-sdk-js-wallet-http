@@ -1,8 +1,8 @@
 # erdwalletjs-http
 
-Lighweight HTTP utility to generate accounts and sign transactions for the Elrond Network.
+Lighweight HTTP utility to generate accounts and sign transactions for MultiversX.
 
-This utility relies on [elrond-core-js](https://github.com/ElrondNetwork/elrond-core-js) to generate accounts and sign transactions.
+This utility relies on [mx-deprecated-core-js](https://github.com/multiversx/mx-deprecated-core-js) to generate accounts and sign transactions.
 
 **This HTTP utility should only be used in secure, off-line, environments. Do not host or use this on a web server.**
 
@@ -11,7 +11,7 @@ This utility relies on [elrond-core-js](https://github.com/ElrondNetwork/elrond-
 Please make sure you have a recent version of [NodeJS](https://nodejs.org/en/) installed.
 
 ```
-git clone https://github.com/ElrondNetwork/erdwalletjs-http.git
+git clone https://github.com/multiversx/mx-sdk-erdjs-wallet-http.git
 cd erdwalletjs-http
 npm install
 node ./index.js
@@ -25,7 +25,7 @@ For API examples, please see [client.http](client.http) as well.
 
 ### Generate an account
 
-One can generate an Elrond account - address, mnemonic, private key and key-file wallet - using the `account/new` route. 
+One can generate a MultiversX account - address, mnemonic, private key and key-file wallet - using the `account/new` route. 
 
 The `password` field is optional, and it will be used to generate the symmetrically encrypted JSON key-file wallet.
 
@@ -42,7 +42,7 @@ Content-Type: application/json
 
 **Response:**
 
-The response contains the `mnemonic phrase`, plus data derived from it: the private key, the address (in bech32 format). Additionally, a key-file object (the content of the Elrond JSON key-file wallet) is returned. 
+The response contains the `mnemonic phrase`, plus data derived from it: the private key, the address (in bech32 format). Additionally, a key-file object (the content of the JSON key-file wallet) is returned. 
 
 ```
 
@@ -86,7 +86,7 @@ The `sender` field must not be set. It will be filled-in by the signing process.
 
 **Response:**
 
-The response is a ready-to-broadcast Elrond transaction.
+The response is a ready-to-broadcast transaction.
 
 Note how the `data` field is encoded in the response.
 

@@ -1,24 +1,24 @@
 {
   "name": "erdwalletjs-http",
   "version": "1.0.0",
-  "description": "Lighweight HTTP utility to manage accounts and sign transactions for the Elrond Network",
+  "description": "Lighweight HTTP utility to manage accounts and sign transactions for MultiversX",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ElrondNetwork/erdwalletjs-http.git"
+    "url": "git+https://github.com/multiversx/mx-sdk-erdjs-wallet-http.git"
   },
   "keywords": [
     "crypto"
   ],
-  "author": "ElrondNetwork",
-  "license": "ISC",
+  "author": "MultiversX",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ElrondNetwork/erdwalletjs-http/issues"
+    "url": "https://github.com/multiversx/mx-sdk-erdjs-wallet-http/issues"
   },
-  "homepage": "https://github.com/ElrondNetwork/erdwalletjs-http#readme",
+  "homepage": "https://github.com/multiversx/mx-sdk-erdjs-wallet-http#readme",
   "dependencies": {
     "@babel/runtime": "^7.11.2",
     "@elrondnetwork/elrond-core-js": "^1.26.2",
